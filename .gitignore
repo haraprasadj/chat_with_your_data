@@ -1,0 +1,6 @@
+.env
+__pycache__
+*.pdf
+*.bin
+test.py
+.DS_Store
