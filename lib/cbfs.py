@@ -1,3 +1,4 @@
+import glob
 import panel as pn
 import param
 
@@ -12,22 +13,26 @@ class cbfs(param.Parameterized):
     def __init__(self,  **params):
         super(cbfs, self).__init__( **params)
         self.panels = []
-        self.loaded_file = "docs/input/file.pdf"
-        self.qa = load_db(self.loaded_file,"stuff", 4)
+        self.loaded_files = []
+        for f in glob.glob("./docs/input/*.pdf"):
+            self.loaded_files.append(f)
+        print(self.loaded_files)
+        self.qa = load_db("./docs/input/", "stuff", 4)
     
     def call_load_db(self, count):        
         file_input = pn.widgets.FileInput(accept='.pdf')
         
         if count == 0 or file_input.value is None:  # init or no file specified :
-            return pn.pane.Markdown(f"Loaded File: {self.loaded_file}")
+            return pn.pane.Markdown(f"Loaded Files: {' ; '.join(self.loaded_files)}")
         else:
-            file_input.save("temp.pdf")  # local copy
-            self.loaded_file = file_input.filename
-            button_load.button_style="outline"
-            self.qa = load_db("temp.pdf", "stuff", 4)
-            button_load.button_style="solid"
+            # file_input.save("temp.pdf")  # local copy
+            # self.loaded_file = file_input.filename
+            # button_load.button_style="outline"
+            # self.qa = load_db("temp.pdf", "stuff", 4)
+            # button_load.button_style="solid"
+            pass
         self.clr_history()
-        return pn.pane.Markdown(f"Loaded File: {self.loaded_file}")
+        return pn.pane.Markdown(f"Loaded File: {' ; '.join(self.loaded_files)}")
 
     def convchain(self, query):
         if not query:
