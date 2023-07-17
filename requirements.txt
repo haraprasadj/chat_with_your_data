@@ -1,0 +1,10 @@
+chromadb
+gpt4all
+jupyter_bokeh
+langchain[docarray]
+llama-cpp-python
+openai
+panel
+pypdf
+python-dotenv
+tiktoken
