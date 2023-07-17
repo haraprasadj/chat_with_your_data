@@ -18,13 +18,13 @@ The file upload utility in `Configure` tab does not work. I am just copying over
 # Screenshots
 
 ### Conversation tab
-![image](img/conversation.jpeg)
+![image](img/conversation.png)
 
 ### Database tab
-![image](img/database.jpeg)
+![image](img/database.png)
 
 ### Chat history tab
-![image](img/chat_history.jpeg)
+![image](img/chat_history.png)
 
 ### Configure tab
-![image](img/configure.jpeg)
+![image](img/configure.png)
