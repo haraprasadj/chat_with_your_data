@@ -38,7 +38,7 @@ tab4=pn.Column(
     pn.Row( file_input, button_load, bound_button_load),
     pn.Row( button_clearhistory, pn.pane.Markdown("Clears chat history. Can use to start a new topic" )),
     pn.layout.Divider(),
-    pn.Row(jpg_pane.clone(width=400))
+    # pn.Row(jpg_pane.clone(width=400))
 )
 dashboard = pn.Column(
     pn.Row(pn.pane.Markdown('# ChatWithYourData_Bot')),
