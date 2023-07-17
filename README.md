@@ -6,7 +6,8 @@ Original source code is from the short course - https://www.deeplearning.ai/shor
 
 # Known issues
 
-The file upload utility in `Configure` tab does not work. I am just copying over the pdf file to `./docs/input` directory.
+- The file upload utility in `Configure` tab does not work. I am just copying over the pdf file to `./docs/input` directory.
+- The conversation window does not scroll, we might need to refresh the whole page once to see new content
 
 # How to use
 
